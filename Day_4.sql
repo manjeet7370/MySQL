@@ -19,7 +19,7 @@ group by product_id
 order by total_sales desc, product_id;
 --
 -- HAVING
-select * from  sales.order_sales;
+
 select product_id, count(*) as total_sales from sales.order_sales
 -- where total_sales > 1 XXXXXXX
 where product_id < 9
@@ -29,7 +29,7 @@ order by product_id desc
 limit 1;
 -- 
 -- DATE
-select * from  order_sales;
+
 select month(order_date) as mnth, sum(price) as total_sales from order_sales
 group by mnth order by mnth;
 
